@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, width=device-width">
+	<title>Document</title>
+</head>
+<body>
+	<div id="app">
+		<section class="list">
+			<header class="header">
+				<div class="arrow-container">
+					<span class="arrow">
+						<span class="arrow green"></span>
+					</span>
+				</div>
+				<div class="login">登陆</div>
+				<h1>图片</h1>
+			</header>
+			<div class="search">
+				<input type="text" placeholder="搜索你想要的图片">
+				<span>搜一搜</span>
+			</div>
+			<ul class="nav clearfix">
+				<li data-id='0'>摄影</li>
+				<li data-id='1'>明星</li>
+				<li data-id='2'>壁纸</li>
+				<li data-id='3'>宠物</li>
+				<li data-id='4'>动漫</li>
+				<li data-id='5'>风景</li>
+				<li data-id='6'>头像</li>
+				<li data-id='7'>人物</li>
+			</ul>
+			<div class="image-container">
+				<div class="left-container"></div>
+				<div class="right-container"></div>
+			</div>
+		</section>
+		<section class='layer'>
+			
+		</section>
+		<script type="text/template" id='layer-tpl'>
+		    
+			<div class="layer-container" style="<%=style%>">
+					<img src="<%=url%>" alt="">
+		    </div>
+		    <div class="header">
+				<h1><%=title%></h1>
+				<div class="arrow-container">
+					<span class="arrow">
+						<span class="arrow black"></span>
+					</span>
+				</div>
+			</div>
+		</script>
+	</div>
+	<script type="text/javascript" src = "static/sea.js"></script>
+	<script type="text/javascript" src = "static/lib/seajs-preload.js"></script>
+	<script type="text/javascript" src = "static/lib/seajs-css.js"></script>
+	<script type="text/javascript" src = "static/lib/zepto.js"></script>
+	<script type="text/javascript" src = "static/lib/zepto.touch.js"></script>
+	<script type="text/javascript" src = "static/lib/underscore.js"></script>
+	<script type="text/javascript" src = "static/lib/backbone.js"></script>
+	<script type="text/javascript">
+	    seajs.use(['app','base.css'],function(app){
+	    	app();
+	    })
+	</script>
+</body>
+</html>
